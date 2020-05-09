@@ -3,51 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>repo-matome</title>
+    <title>css grid example</title>
 
     <style>
         body { 
             margin: 0;
+            color: #fff;
         }
 
         .container {
             display: grid;
-            grid-template-columns: 1fr minmax(480px, 3fr) 1fr;
+            grid-template-columns: 1fr minmax(460px, 3fr) 1fr;
         }
 
         .header {
             grid-column-start: 2;
-            grid-column-end: 3;
+            grid-column-end: auto;
 
             grid-row-start: 1;
             grid-row-end: auto;
 
-            color: white;
             background-color: green;
         }
 
         .main {
             grid-column-start: 2;
-            grid-column-end: 3;
+            grid-column-end: auto;
 
             grid-row-start: 2;
             grid-row-end: auto;
 
-            color: white;
             background-color: blue;
+        }
+
+        .footer {
+            grid-column-start: 2;
+            grid-column-end: auto;
+
+            grid-row-start: 3;
+            grid-row-end: auto;
+
+            background-color: red;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1>header</h1>
-            <p>content</p>
+            <h1>Header</h1>
             <p>content</p>
             <p>content</p>
         </header>
+
         <main class="main">
-            <h1>main</h1>
+            <h1>Main</h1>
             <p>content</p>
             <p>content</p>
             <p>content</p>
@@ -63,6 +72,12 @@
             <p>content</p>
             <p>content</p>
         </main>
+
+        <footer class="footer">
+            <h1>Footer</h1>
+            <p>content</p>
+            <p>content</p>
+        </footer>
     </div>
 </body>
 </html>
